@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>【無料】LINEで特典を受け取る</title>
+
+<!-- ========================================
+  TikTok Pixel ここにピクセルIDを入れる
+  PIXEL_ID の部分を自分のピクセルIDに置き換えてください
+========================================= -->
+<script>
+!function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+/* ▼▼▼ ここにピクセルIDを入れる ▼▼▼ */
+ttq.load('PIXEL_ID');
+/* ▲▲▲ ここにピクセルIDを入れる ▲▲▲ */
+ttq.page();
+}(window,document,'ttq');
+</script>
+<!-- TikTok Pixel ここまで -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+:root{--green:#06C755;--bg:#f0faf4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);min-height:100vh;color:#1a1a1a;overflow-x:hidden}
+.header{background:var(--green);padding:12px 20px;text-align:center;color:#fff;font-size:13px;font-weight:700;letter-spacing:.05em;animation:slideDown .5s ease-out}
+@keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+.container{max-width:380px;margin:0 auto;padding:24px 20px 40px}
+.card{background:#fff;border-radius:20px;padding:32px 24px;box-shadow:0 8px 40px rgba(6,199,85,.12),0 2px 8px rgba(0,0,0,.06);text-align:center;animation:fadeUp .6s ease-out .2s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.badge{display:inline-block;background:#fff3cd;color:#856404;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px}
+.card h1{font-size:22px;font-weight:900;line-height:1.4;margin-bottom:8px}
+.card h1 span{color:var(--green)}
+.card .sub{font-size:14px;color:#666;margin-bottom:24px;line-height:1.6}
+.benefits{background:#f8fdf9;border:2px solid #e0f5e6;border-radius:14px;padding:18px;margin-bottom:24px;text-align:left}
+.benefits .row{display:flex;align-items:center;gap:10px;padding:8px 0}
+.benefits .row+.row{border-top:1px solid #e0f5e6}
+.benefits .check{width:22px;height:22px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.benefits .check svg{width:12px;height:12px}
+.benefits .row p{font-size:14px;font-weight:700;color:#333}
+.urgency{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:16px;font-size:13px;color:#e74c3c;font-weight:700}
+.urgency .dot{width:8px;height:8px;background:#e74c3c;border-radius:50%;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.cta-btn{display:block;width:100%;padding:18px 24px;background:var(--green);color:#fff;font-size:18px;font-weight:900;border:none;border-radius:14px;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(6,199,85,.4);-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden;line-height:1.4}
+.cta-btn:active{transform:scale(.97)}
+.cta-btn::after{content:'';position:absolute;inset:-3px;border-radius:17px;border:3px solid var(--green);animation:pulse 2s ease-in-out infinite;pointer-events:none}
+@keyframes pulse{0%,100%{opacity:0;transform:scale(1)}50%{opacity:.5;transform:scale(1.03)}}
+.cta-sub{font-size:12px;color:#888;margin-top:10px}
+.alt-buttons{margin-top:20px;animation:fadeUp .6s ease-out .8s both}
+.alt-btn{display:block;width:100%;padding:14px;background:transparent;color:var(--green);font-size:14px;font-weight:700;border:2px solid #d0eed8;border-radius:12px;cursor:pointer;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent}
+.alt-btn:active{background:#f0faf4}
+.qr-section{margin-top:20px;background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.06);text-align:center;animation:fadeUp .6s ease-out 1s both}
+.qr-section img{width:160px;border-radius:8px}
+.qr-section p{font-size:12px;color:#888;margin-top:8px}
+.footer{text-align:center;margin-top:24px;font-size:11px;color:#aaa;line-height:1.6}
+</style>
+</head>
+<body>
+
+<div class="header">🎁 今だけ限定！LINEで無料特典配布中</div>
+
+<div class="container">
+  <div class="card">
+    <div class="badge">✨ 期間限定</div>
+    <h1>LINEで<span>無料特典</span>を<br>受け取ろう！</h1>
+    <p class="sub">ボタンをタップしてLINEの<br>友だち追加をするだけ！</p>
+
+    <div class="benefits">
+      <div class="row">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+        <p>限定コンテンツを無料でお届け</p>
+      </div>
+      <div class="row">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+        <p>お得な情報をいち早くGET</p>
+      </div>
+      <div class="row">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+        <p>追加するだけ！面倒な入力なし</p>
+      </div>
+    </div>
+
+    <div class="urgency">
+      <div class="dot"></div>
+      <span id="count">残りあと32名</span>
+    </div>
+
+    <button class="cta-btn" id="mainBtn" onclick="openLINE()">
+      LINEで友だち追加する ▶
+    </button>
+    <p class="cta-sub">無料で追加できます・いつでもブロックOK</p>
+  </div>
+
+  <div class="alt-buttons">
+    <a class="alt-btn" href="line://ti/p/@554mifwb" onclick="trackClick()">
+      上のボタンで開かない場合はこちら①
+    </a>
+    <a class="alt-btn" href="https://line.me/R/ti/p/@554mifwb" target="_blank" rel="noopener" onclick="trackClick()">
+      上のボタンで開かない場合はこちら②
+    </a>
+    <button class="alt-btn" onclick="copyID()" id="copyBtn">
+      ID「@554mifwb」をコピーしてLINEで検索
+    </button>
+  </div>
+
+  <div class="qr-section">
+    <img src="https://qr-official.line.me/sid/M/554mifwb.png" alt="LINE QR" onerror="this.parentElement.style.display='none'">
+    <p>スクショしてLINEのQRリーダーで読み取り</p>
+  </div>
+
+  <div class="footer">
+    ※ LINEアプリが必要です<br>
+    ※ いつでもブロック・解除できます
+  </div>
+</div>
+
+<script>
+(function(){
+  var ID='@554mifwb';
+  var U='https://line.me/R/ti/p/'+ID;
+  var S='line://ti/p/'+ID;
+  var ua=navigator.userAgent.toLowerCase();
+  var isAndroid=/android/.test(ua);
+  var isIOS=/iphone|ipad|ipod/.test(ua);
+
+  // TikTokピクセル クリックイベント送信
+  window.trackClick=function(){
+    try{
+      if(typeof ttq!=='undefined'){
+        ttq.track('ClickButton');
+      }
+    }catch(e){}
+  };
+
+  window.openLINE=function(){
+    var btn=document.getElementById('mainBtn');
+    btn.textContent='起動中...';
+
+    // ピクセルにクリックイベント送信
+    trackClick();
+
+    if(isAndroid){
+      // Android: intent → スキーム → Universal Link
+      window.location.href='intent://ti/p/'+ID+'#Intent;scheme=line;package=jp.naver.line.android;S.browser_fallback_url='+encodeURIComponent(U)+';end';
+      setTimeout(function(){window.location.href=S},1500);
+      setTimeout(function(){window.location.href=U},3000);
+    }
+    else if(isIOS){
+      // iOS: スキーム → Universal Link → window.open
+      window.location.href=S;
+      setTimeout(function(){window.location.href=U},1000);
+      setTimeout(function(){try{window.open(U,'_blank')}catch(e){}},2000);
+    }
+    else{
+      window.location.href=U;
+    }
+
+    setTimeout(function(){
+      btn.textContent='もう一度タップして開く ▶';
+    },4000);
+  };
+
+  window.copyID=function(){
+    var b=document.getElementById('copyBtn');
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(ID).then(function(){
+        b.textContent='✓ コピー完了！LINEで「'+ID+'」を検索してね';
+      }).catch(fb);
+    }else{fb()}
+    function fb(){
+      var t=document.createElement('textarea');t.value=ID;
+      t.style.cssText='position:fixed;left:-9999px';
+      document.body.appendChild(t);t.select();
+      try{document.execCommand('copy');b.textContent='✓ コピー完了！'}catch(e){
+        b.textContent='ID: '+ID+'（長押しでコピー）';
+      }
+      document.body.removeChild(t);
+    }
+  };
+
+  var c=document.getElementById('count');
+  if(c){var n=Math.floor(Math.random()*20)+15;c.textContent='残りあと'+n+'名'}
+})();
+</script>
+</body>
+</html>
