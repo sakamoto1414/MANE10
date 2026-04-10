@@ -5,55 +5,84 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <title>【無料】LINEで特典を受け取る</title>
 
-<!-- ========================================
-  TikTok Pixel ここにピクセルIDを入れる
-  PIXEL_ID の部分を自分のピクセルIDに置き換えてください
-========================================= -->
+<!-- TikTok Pixel Code Start -->
 <script>
-!function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-/* ▼▼▼ ここにピクセルIDを入れる ▼▼▼ */
-ttq.load('PIXEL_ID');
-/* ▲▲▲ ここにピクセルIDを入れる ▲▲▲ */
-ttq.page();
-}(window,document,'ttq');
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load('D7CKOH3C77UFT36K658G');
+  ttq.page();
+}(window, document, 'ttq');
 </script>
-<!-- TikTok Pixel ここまで -->
+<!-- TikTok Pixel Code End -->
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 :root{--green:#06C755;--bg:#f0faf4}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);min-height:100vh;color:#1a1a1a;overflow-x:hidden}
+
 .header{background:var(--green);padding:12px 20px;text-align:center;color:#fff;font-size:13px;font-weight:700;letter-spacing:.05em;animation:slideDown .5s ease-out}
 @keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+
 .container{max-width:380px;margin:0 auto;padding:24px 20px 40px}
+
 .card{background:#fff;border-radius:20px;padding:32px 24px;box-shadow:0 8px 40px rgba(6,199,85,.12),0 2px 8px rgba(0,0,0,.06);text-align:center;animation:fadeUp .6s ease-out .2s both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
 .badge{display:inline-block;background:#fff3cd;color:#856404;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px}
 .card h1{font-size:22px;font-weight:900;line-height:1.4;margin-bottom:8px}
 .card h1 span{color:var(--green)}
 .card .sub{font-size:14px;color:#666;margin-bottom:24px;line-height:1.6}
+
 .benefits{background:#f8fdf9;border:2px solid #e0f5e6;border-radius:14px;padding:18px;margin-bottom:24px;text-align:left}
 .benefits .row{display:flex;align-items:center;gap:10px;padding:8px 0}
 .benefits .row+.row{border-top:1px solid #e0f5e6}
 .benefits .check{width:22px;height:22px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .benefits .check svg{width:12px;height:12px}
 .benefits .row p{font-size:14px;font-weight:700;color:#333}
+
 .urgency{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:16px;font-size:13px;color:#e74c3c;font-weight:700}
 .urgency .dot{width:8px;height:8px;background:#e74c3c;border-radius:50%;animation:blink 1s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.cta-btn{display:block;width:100%;padding:18px 24px;background:var(--green);color:#fff;font-size:18px;font-weight:900;border:none;border-radius:14px;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(6,199,85,.4);-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden;line-height:1.4}
+
+.cta-btn{display:block;width:100%;padding:18px 24px;background:var(--green);color:#fff;font-size:18px;font-weight:900;border:none;border-radius:14px;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(6,199,85,.4);-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden;line-height:1.4;transition:background .3s,box-shadow .3s}
 .cta-btn:active{transform:scale(.97)}
 .cta-btn::after{content:'';position:absolute;inset:-3px;border-radius:17px;border:3px solid var(--green);animation:pulse 2s ease-in-out infinite;pointer-events:none}
 @keyframes pulse{0%,100%{opacity:0;transform:scale(1)}50%{opacity:.5;transform:scale(1.03)}}
 .cta-sub{font-size:12px;color:#888;margin-top:10px}
-.alt-buttons{margin-top:20px;animation:fadeUp .6s ease-out .8s both}
-.alt-btn{display:block;width:100%;padding:14px;background:transparent;color:var(--green);font-size:14px;font-weight:700;border:2px solid #d0eed8;border-radius:12px;cursor:pointer;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent}
+
+/* 外部ブラウザ誘導 */
+.browser-guide{display:none;background:#fff8e1;border:2px solid #ffc107;border-radius:14px;padding:16px;margin-top:20px;text-align:center;animation:fadeUp .4s ease-out both}
+.browser-guide.show{display:block}
+.browser-guide p{font-size:13px;font-weight:700;color:#856404;line-height:1.6;margin-bottom:8px}
+.browser-guide .arrow{font-size:24px;animation:bounce 1s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.browser-guide .small{font-size:11px;color:#a08000;margin-top:6px}
+
+/* 開かなかった時のステップガイド */
+.fail-guide{display:none;margin-top:20px;animation:fadeUp .4s ease-out both}
+.fail-guide.show{display:block}
+.fail-title{font-size:15px;font-weight:900;color:#e74c3c;text-align:center;margin-bottom:14px}
+.step{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 4px 16px rgba(0,0,0,.06);margin-bottom:10px;display:flex;align-items:center;gap:12px}
+.step .num{flex-shrink:0;width:28px;height:28px;background:var(--green);color:#fff;border-radius:50%;font-size:14px;font-weight:900;line-height:28px;text-align:center}
+.step span{font-size:13px;font-weight:700;color:#333;line-height:1.5}
+
+.alt-btn{display:block;width:100%;padding:14px;background:transparent;color:var(--green);font-size:14px;font-weight:700;border:2px solid #d0eed8;border-radius:12px;cursor:pointer;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent;text-align:center;transition:background .2s}
 .alt-btn:active{background:#f0faf4}
+.alt-btn.green{background:var(--green);color:#fff;border-color:var(--green)}
+.alt-btn.green:active{background:#05b34d}
+.alt-btn.orange{background:#ff9800;color:#fff;border-color:#ff9800}
+.alt-btn.orange:active{background:#e68900}
+
 .qr-section{margin-top:20px;background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.06);text-align:center;animation:fadeUp .6s ease-out 1s both}
 .qr-section img{width:160px;border-radius:8px}
 .qr-section p{font-size:12px;color:#888;margin-top:8px}
+
 .footer{text-align:center;margin-top:24px;font-size:11px;color:#aaa;line-height:1.6}
+
+.hidden-frame{width:0;height:0;border:none;position:absolute;left:-9999px}
 </style>
 </head>
 <body>
@@ -92,15 +121,40 @@ body{font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;back
     <p class="cta-sub">無料で追加できます・いつでもブロックOK</p>
   </div>
 
-  <div class="alt-buttons">
-    <a class="alt-btn" href="line://ti/p/@554mifwb" onclick="trackClick()">
-      上のボタンで開かない場合はこちら①
+  <!-- アプリ内ブラウザ検出時の誘導 -->
+  <div class="browser-guide" id="browserGuide">
+    <p>⚠️ アプリ内ブラウザでは<br>LINEが開けない場合があります</p>
+    <div class="arrow">↗️</div>
+    <p>右上の <strong>「…」</strong> or <strong>「︙」</strong> から<br><strong>「ブラウザで開く」</strong>をタップ！</p>
+    <p class="small">Safari / Chrome で開くとスムーズです</p>
+  </div>
+
+  <!-- 開かなかった場合のガイド（動的表示） -->
+  <div class="fail-guide" id="failGuide">
+    <div class="fail-title">🔄 LINEが開かない？</div>
+
+    <div class="step">
+      <div class="num">1</div>
+      <span>まずこちらをタップ👇</span>
+    </div>
+    <a class="alt-btn green" href="https://line.me/R/ti/p/@554mifwb" target="_blank" rel="noopener" onclick="trackClick()">
+      LINEを開く（方法②）▶
     </a>
-    <a class="alt-btn" href="https://line.me/R/ti/p/@554mifwb" target="_blank" rel="noopener" onclick="trackClick()">
-      上のボタンで開かない場合はこちら②
+
+    <div class="step" style="margin-top:14px">
+      <div class="num">2</div>
+      <span>それでもダメなら👇</span>
+    </div>
+    <a class="alt-btn green" href="line://ti/p/@554mifwb" onclick="trackClick()">
+      LINEを開く（方法③）▶
     </a>
-    <button class="alt-btn" onclick="copyID()" id="copyBtn">
-      ID「@554mifwb」をコピーしてLINEで検索
+
+    <div class="step" style="margin-top:14px">
+      <div class="num">3</div>
+      <span>IDをコピーしてLINEアプリで<br>友だち追加 → ID検索👇</span>
+    </div>
+    <button class="alt-btn orange" onclick="copyID()" id="copyBtn">
+      📋 ID「@554mifwb」をコピーする
     </button>
   </div>
 
@@ -115,72 +169,123 @@ body{font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;back
   </div>
 </div>
 
+<iframe id="hiddenFrame" class="hidden-frame"></iframe>
+
 <script>
 (function(){
-  var ID='@554mifwb';
-  var U='https://line.me/R/ti/p/'+ID;
-  var S='line://ti/p/'+ID;
-  var ua=navigator.userAgent.toLowerCase();
-  var isAndroid=/android/.test(ua);
-  var isIOS=/iphone|ipad|ipod/.test(ua);
+  var ID = '@554mifwb';
+  var UNIVERSAL = 'https://line.me/R/ti/p/' + ID;
+  var SCHEME = 'line://ti/p/' + ID;
+  var ua = navigator.userAgent.toLowerCase();
+  var isAndroid = /android/.test(ua);
+  var isIOS = /iphone|ipad|ipod/.test(ua);
+  var isTikTok = /tiktok|musical|bytedance|bytelocale/.test(ua);
+  var isInstagram = /instagram/.test(ua);
+  var isInApp = isTikTok || isInstagram || /fbav|fban|line\/|twitter|snapchat/.test(ua);
+  var attempt = 0;
 
-  // TikTokピクセル クリックイベント送信
-  window.trackClick=function(){
-    try{
-      if(typeof ttq!=='undefined'){
-        ttq.track('ClickButton');
-      }
-    }catch(e){}
+  // アプリ内ブラウザ → 誘導バナー表示
+  if (isInApp) {
+    var g = document.getElementById('browserGuide');
+    if (g) g.classList.add('show');
+  }
+
+  window.trackClick = function(){
+    try { if(typeof ttq !== 'undefined') ttq.track('ClickButton'); } catch(e){}
   };
 
-  window.openLINE=function(){
-    var btn=document.getElementById('mainBtn');
-    btn.textContent='起動中...';
+  function showFailGuide(){
+    var fg = document.getElementById('failGuide');
+    if (fg) fg.classList.add('show');
+  }
 
-    // ピクセルにクリックイベント送信
+  window.openLINE = function(){
+    var btn = document.getElementById('mainBtn');
+    attempt++;
     trackClick();
 
-    if(isAndroid){
-      // Android: intent → スキーム → Universal Link
-      window.location.href='intent://ti/p/'+ID+'#Intent;scheme=line;package=jp.naver.line.android;S.browser_fallback_url='+encodeURIComponent(U)+';end';
-      setTimeout(function(){window.location.href=S},1500);
-      setTimeout(function(){window.location.href=U},3000);
+    btn.textContent = '起動中...';
+
+    if (attempt <= 2) {
+      if (isAndroid) {
+        // Android: intent → Universal Link → scheme
+        try {
+          window.location.href = 'intent://ti/p/' + ID + '#Intent;scheme=line;package=jp.naver.line.android;S.browser_fallback_url=' + encodeURIComponent(UNIVERSAL) + ';end';
+        } catch(e) {
+          window.location.href = UNIVERSAL;
+        }
+        setTimeout(function(){ window.location.href = UNIVERSAL; }, 2000);
+        setTimeout(function(){ try { window.location.href = SCHEME; } catch(e){} }, 3500);
+      }
+      else if (isIOS) {
+        // iOS: Universal Link → scheme → window.open
+        window.location.href = UNIVERSAL;
+        setTimeout(function(){
+          try { window.location.href = SCHEME; } catch(e){}
+        }, 1200);
+        setTimeout(function(){
+          try { window.open(UNIVERSAL, '_blank'); } catch(e){}
+        }, 2500);
+        setTimeout(function(){
+          // iframe経由のscheme起動
+          try {
+            var f = document.getElementById('hiddenFrame');
+            if (f) f.src = SCHEME;
+          } catch(e){}
+        }, 3500);
+      }
+      else {
+        window.location.href = UNIVERSAL;
+      }
     }
-    else if(isIOS){
-      // iOS: スキーム → Universal Link → window.open
-      window.location.href=S;
-      setTimeout(function(){window.location.href=U},1000);
-      setTimeout(function(){try{window.open(U,'_blank')}catch(e){}},2000);
-    }
-    else{
-      window.location.href=U;
+    else {
+      // 3回目以降: 全手段同時発射
+      try { window.location.href = SCHEME; } catch(e){}
+      setTimeout(function(){ window.location.href = UNIVERSAL; }, 800);
+      setTimeout(function(){
+        try { window.open(UNIVERSAL, '_blank'); } catch(e){}
+      }, 1600);
+      setTimeout(function(){
+        try {
+          var f = document.getElementById('hiddenFrame');
+          if (f) f.src = SCHEME;
+        } catch(e){}
+      }, 2400);
     }
 
+    // 4秒後にまだこのページ → 失敗と判断
     setTimeout(function(){
-      btn.textContent='もう一度タップして開く ▶';
-    },4000);
+      btn.textContent = 'もう一度タップ ▶';
+      showFailGuide();
+    }, 4000);
   };
 
-  window.copyID=function(){
-    var b=document.getElementById('copyBtn');
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(ID).then(function(){
-        b.textContent='✓ コピー完了！LINEで「'+ID+'」を検索してね';
-      }).catch(fb);
-    }else{fb()}
-    function fb(){
-      var t=document.createElement('textarea');t.value=ID;
-      t.style.cssText='position:fixed;left:-9999px';
-      document.body.appendChild(t);t.select();
-      try{document.execCommand('copy');b.textContent='✓ コピー完了！'}catch(e){
-        b.textContent='ID: '+ID+'（長押しでコピー）';
-      }
+  window.copyID = function(){
+    var b = document.getElementById('copyBtn');
+    function success(){
+      b.textContent = '✅ コピー完了！LINEで「' + ID + '」を検索';
+      b.style.background = '#06C755';
+      b.style.borderColor = '#06C755';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ID).then(success).catch(fallback);
+    } else { fallback(); }
+
+    function fallback(){
+      var t = document.createElement('textarea');
+      t.value = ID;
+      t.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
+      document.body.appendChild(t);
+      t.focus(); t.select();
+      try { document.execCommand('copy'); success(); }
+      catch(e){ b.textContent = 'ID: ' + ID + '（長押しでコピー）'; }
       document.body.removeChild(t);
     }
   };
 
-  var c=document.getElementById('count');
-  if(c){var n=Math.floor(Math.random()*20)+15;c.textContent='残りあと'+n+'名'}
+  // 残り人数
+  var c = document.getElementById('count');
+  if (c) c.textContent = '残りあと' + (Math.floor(Math.random()*20)+15) + '名';
 })();
 </script>
 </body>
