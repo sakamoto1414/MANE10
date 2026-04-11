@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<title>【無料】LINEで特典を受け取る</title>
+<title>LINE友だち追加</title>
 
 <!-- TikTok Pixel Code Start -->
 <script>
@@ -19,273 +19,332 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
-:root{--green:#06C755;--bg:#f0faf4}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);min-height:100vh;color:#1a1a1a;overflow-x:hidden}
+body{font-family:'Noto Sans JP',sans-serif;background:#000;min-height:100vh;min-height:100dvh;color:#fff;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 
-.header{background:var(--green);padding:12px 20px;text-align:center;color:#fff;font-size:13px;font-weight:700;letter-spacing:.05em;animation:slideDown .5s ease-out}
+.loading{position:fixed;inset:0;z-index:200;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity .4s}
+.loading.hide{opacity:0;pointer-events:none}
+.loading-icon{font-size:40px;animation:float 1.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.loading p{font-size:15px;font-weight:700;color:rgba(255,255,255,.8)}
+.loading-bar{width:200px;height:4px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden}
+.loading-bar-fill{height:100%;width:0;background:#06C755;border-radius:4px;animation:fill 2s ease-out forwards}
+@keyframes fill{0%{width:0}100%{width:100%}}
+
+.inapp-alert{display:none;position:fixed;top:0;left:0;right:0;z-index:100;background:linear-gradient(135deg,#ff6b00,#ff8c00);padding:14px 20px;text-align:center;box-shadow:0 4px 20px rgba(255,107,0,.4);animation:slideDown .4s ease-out}
+.inapp-alert.show{display:block}
 @keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+.inapp-alert p{font-size:13px;font-weight:700;color:#fff;line-height:1.5}
+.inapp-alert .action{font-size:15px;margin-top:6px}
 
-.container{max-width:380px;margin:0 auto;padding:24px 20px 40px}
+.hero{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;position:relative;background:linear-gradient(160deg,#0a1a0f 0%,#0d2818 40%,#06C755 200%)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(6,199,85,.15) 0%,transparent 70%)}
 
-.card{background:#fff;border-radius:20px;padding:32px 24px;box-shadow:0 8px 40px rgba(6,199,85,.12),0 2px 8px rgba(0,0,0,.06);text-align:center;animation:fadeUp .6s ease-out .2s both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-size:26px;font-weight:900;line-height:1.5;margin-bottom:8px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:#06C755;text-shadow:0 0 30px rgba(6,199,85,.5)}
+.hero .lead{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:24px;line-height:1.6}
 
-.badge{display:inline-block;background:#fff3cd;color:#856404;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px}
-.card h1{font-size:22px;font-weight:900;line-height:1.4;margin-bottom:8px}
-.card h1 span{color:var(--green)}
-.card .sub{font-size:14px;color:#666;margin-bottom:24px;line-height:1.6}
+.proof{display:flex;gap:16px;justify-content:center;margin-bottom:28px}
+.proof-item{text-align:center}
+.proof-num{font-size:28px;font-weight:900;color:#06C755}
+.proof-label{font-size:10px;color:rgba(255,255,255,.5);margin-top:2px}
 
-.benefits{background:#f8fdf9;border:2px solid #e0f5e6;border-radius:14px;padding:18px;margin-bottom:24px;text-align:left}
-.benefits .row{display:flex;align-items:center;gap:10px;padding:8px 0}
-.benefits .row+.row{border-top:1px solid #e0f5e6}
-.benefits .check{width:22px;height:22px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.benefits .check svg{width:12px;height:12px}
-.benefits .row p{font-size:14px;font-weight:700;color:#333}
-
-.urgency{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:16px;font-size:13px;color:#e74c3c;font-weight:700}
-.urgency .dot{width:8px;height:8px;background:#e74c3c;border-radius:50%;animation:blink 1s infinite}
+.status{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:20px;font-size:13px;color:#ff6b6b;font-weight:700}
+.status .dot{width:8px;height:8px;background:#ff6b6b;border-radius:50%;animation:blink 1s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-.cta-btn{display:block;width:100%;padding:18px 24px;background:var(--green);color:#fff;font-size:18px;font-weight:900;border:none;border-radius:14px;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(6,199,85,.4);-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden;line-height:1.4;transition:background .3s,box-shadow .3s}
-.cta-btn:active{transform:scale(.97)}
-.cta-btn::after{content:'';position:absolute;inset:-3px;border-radius:17px;border:3px solid var(--green);animation:pulse 2s ease-in-out infinite;pointer-events:none}
-@keyframes pulse{0%,100%{opacity:0;transform:scale(1)}50%{opacity:.5;transform:scale(1.03)}}
-.cta-sub{font-size:12px;color:#888;margin-top:10px}
+.cta{width:100%;max-width:340px}
+.cta-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:20px;background:#06C755;color:#fff;font-size:19px;font-weight:900;border:none;border-radius:16px;cursor:pointer;box-shadow:0 8px 32px rgba(6,199,85,.5);animation:glow 2s ease-in-out infinite;position:relative;overflow:hidden}
+.cta-btn::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 40%,rgba(255,255,255,.15) 50%,transparent 60%);animation:shine 3s infinite}
+@keyframes shine{0%{transform:translateX(-100%) rotate(45deg)}100%{transform:translateX(100%) rotate(45deg)}}
+@keyframes glow{0%,100%{box-shadow:0 8px 32px rgba(6,199,85,.5),0 0 0 0 rgba(6,199,85,.4)}50%{box-shadow:0 8px 32px rgba(6,199,85,.5),0 0 0 8px rgba(6,199,85,.15)}}
+.cta-btn:active{transform:scale(.96)}
+.cta-btn svg{width:24px;height:24px;flex-shrink:0}
+.cta-note{font-size:11px;color:rgba(255,255,255,.4);margin-top:10px;text-align:center}
 
-/* 外部ブラウザ誘導 */
-.browser-guide{display:none;background:#fff8e1;border:2px solid #ffc107;border-radius:14px;padding:16px;margin-top:20px;text-align:center;animation:fadeUp .4s ease-out both}
-.browser-guide.show{display:block}
-.browser-guide p{font-size:13px;font-weight:700;color:#856404;line-height:1.6;margin-bottom:8px}
-.browser-guide .arrow{font-size:24px;animation:bounce 1s infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.browser-guide .small{font-size:11px;color:#a08000;margin-top:6px}
+.scroll-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:11px;color:rgba(255,255,255,.3);display:none;flex-direction:column;align-items:center;gap:4px}
+.scroll-hint.show{display:flex}
+.scroll-hint .chevron{animation:bob 1.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
 
-/* 開かなかった時のステップガイド */
-.fail-guide{display:none;margin-top:20px;animation:fadeUp .4s ease-out both}
-.fail-guide.show{display:block}
-.fail-title{font-size:15px;font-weight:900;color:#e74c3c;text-align:center;margin-bottom:14px}
-.step{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 4px 16px rgba(0,0,0,.06);margin-bottom:10px;display:flex;align-items:center;gap:12px}
-.step .num{flex-shrink:0;width:28px;height:28px;background:var(--green);color:#fff;border-radius:50%;font-size:14px;font-weight:900;line-height:28px;text-align:center}
-.step span{font-size:13px;font-weight:700;color:#333;line-height:1.5}
+.recover{display:none;max-width:380px;margin:0 auto;padding:0 20px 40px}
+.recover.show{display:block;animation:fadeUp .4s ease-out}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
-.alt-btn{display:block;width:100%;padding:14px;background:transparent;color:var(--green);font-size:14px;font-weight:700;border:2px solid #d0eed8;border-radius:12px;cursor:pointer;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent;text-align:center;transition:background .2s}
-.alt-btn:active{background:#f0faf4}
-.alt-btn.green{background:var(--green);color:#fff;border-color:var(--green)}
-.alt-btn.green:active{background:#05b34d}
-.alt-btn.orange{background:#ff9800;color:#fff;border-color:#ff9800}
-.alt-btn.orange:active{background:#e68900}
+.recover-title{font-size:16px;font-weight:900;text-align:center;margin-bottom:16px;color:#fff}
 
-.qr-section{margin-top:20px;background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.06);text-align:center;animation:fadeUp .6s ease-out 1s both}
-.qr-section img{width:160px;border-radius:8px}
-.qr-section p{font-size:12px;color:#888;margin-top:8px}
+.method{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;margin-bottom:12px;backdrop-filter:blur(8px)}
+.method-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.method-num{width:26px;height:26px;background:#06C755;border-radius:50%;font-size:13px;font-weight:900;line-height:26px;text-align:center;flex-shrink:0}
+.method-head span{font-size:13px;font-weight:700;color:rgba(255,255,255,.8)}
 
-.footer{text-align:center;margin-top:24px;font-size:11px;color:#aaa;line-height:1.6}
+.method-btn{display:block;width:100%;padding:14px;background:#06C755;color:#fff;font-size:15px;font-weight:900;border:none;border-radius:12px;cursor:pointer;text-decoration:none;text-align:center}
+.method-btn:active{opacity:.85}
+.method-btn.outline{background:transparent;border:2px solid rgba(255,255,255,.2);color:#fff;font-weight:700}
+.method-btn.outline:active{background:rgba(255,255,255,.05)}
+.method-btn.orange{background:#ff9800}
+.method-btn.orange:active{background:#e68a00}
 
-.hidden-frame{width:0;height:0;border:none;position:absolute;left:-9999px}
+.qr-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px;text-align:center;margin-top:12px;backdrop-filter:blur(8px)}
+.qr-box img{width:140px;border-radius:8px;background:#fff;padding:8px}
+.qr-box p{font-size:11px;color:rgba(255,255,255,.4);margin-top:8px}
+
+.footer{text-align:center;padding:24px 20px;font-size:10px;color:rgba(255,255,255,.25);line-height:1.6}
+
+iframe.hidden{width:0;height:0;border:none;position:absolute;left:-9999px}
 </style>
 </head>
 <body>
 
-<div class="header">🎁 今だけ限定！LINEで無料特典配布中</div>
+<div class="loading" id="loadingOverlay">
+  <div class="loading-icon">💬</div>
+  <p>LINEを起動しています...</p>
+  <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+</div>
 
-<div class="container">
-  <div class="card">
-    <div class="badge">✨ 期間限定</div>
-    <h1>LINEで<span>無料特典</span>を<br>受け取ろう！</h1>
-    <p class="sub">ボタンをタップしてLINEの<br>友だち追加をするだけ！</p>
+<div class="inapp-alert" id="inappAlert">
+  <p>⚠ このままだとLINEが開けません</p>
+  <p class="action">右上の <strong>「⋯」</strong> → <strong>「ブラウザで開く」</strong></p>
+</div>
 
-    <div class="benefits">
-      <div class="row">
-        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-        <p>限定コンテンツを無料でお届け</p>
-      </div>
-      <div class="row">
-        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-        <p>お得な情報をいち早くGET</p>
-      </div>
-      <div class="row">
-        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-        <p>追加するだけ！面倒な入力なし</p>
-      </div>
+<section class="hero" id="heroSection">
+  <h1><em>無料特典</em>を<br>今すぐ受け取る</h1>
+  <p class="lead">LINEで友だち追加するだけ！<br>面倒な登録・入力は一切なし</p>
+
+  <div class="proof">
+    <div class="proof-item">
+      <div class="proof-num" id="addCount">3,482</div>
+      <div class="proof-label">人が追加済み</div>
     </div>
-
-    <div class="urgency">
-      <div class="dot"></div>
-      <span id="count">残りあと32名</span>
+    <div class="proof-item">
+      <div class="proof-num">0円</div>
+      <div class="proof-label">完全無料</div>
     </div>
+    <div class="proof-item">
+      <div class="proof-num">3秒</div>
+      <div class="proof-label">で完了</div>
+    </div>
+  </div>
 
+  <div class="status">
+    <div class="dot"></div>
+    <span id="statusText">残りあと28名</span>
+  </div>
+
+  <div class="cta">
     <button class="cta-btn" id="mainBtn" onclick="openLINE()">
-      LINEで友だち追加する ▶
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M12 .049C5.373.049 0 4.431 0 9.813c0 4.842 4.296 8.899 10.096 9.668.393.085.928.26 1.063.596.12.306.079.786.038 1.094l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.008 24 12.015 24 9.813 24 4.431 18.627.049 12 .049"/></svg>
+      友だち追加して受け取る
     </button>
-    <p class="cta-sub">無料で追加できます・いつでもブロックOK</p>
+    <p class="cta-note">完全無料 ・ いつでもブロックOK</p>
   </div>
 
-  <!-- アプリ内ブラウザ検出時の誘導 -->
-  <div class="browser-guide" id="browserGuide">
-    <p>⚠️ アプリ内ブラウザでは<br>LINEが開けない場合があります</p>
-    <div class="arrow">↗️</div>
-    <p>右上の <strong>「…」</strong> or <strong>「︙」</strong> から<br><strong>「ブラウザで開く」</strong>をタップ！</p>
-    <p class="small">Safari / Chrome で開くとスムーズです</p>
+  <div class="scroll-hint" id="scrollHint">
+    <span>開けない場合は下へ</span>
+    <span class="chevron">▼</span>
+  </div>
+</section>
+
+<div class="recover" id="recover">
+  <div class="recover-title">📱 LINEが開かない場合</div>
+
+  <div class="method">
+    <div class="method-head">
+      <div class="method-num">1</div>
+      <span>こちらからLINEを開く</span>
+    </div>
+    <a class="method-btn" href="https://line.me/R/ti/p/@554mifwb" target="_blank" rel="noopener" onclick="trackClick()">
+      LINEを開く ▶
+    </a>
   </div>
 
-  <!-- 開かなかった場合のガイド（動的表示） -->
-  <div class="fail-guide" id="failGuide">
-    <div class="fail-title">🔄 LINEが開かない？</div>
-
-    <div class="step">
-      <div class="num">1</div>
-      <span>まずこちらをタップ👇</span>
+  <div class="method">
+    <div class="method-head">
+      <div class="method-num">2</div>
+      <span>別の方法で開く</span>
     </div>
-    <a class="alt-btn green" href="https://line.me/R/ti/p/@554mifwb" target="_blank" rel="noopener" onclick="trackClick()">
-      LINEを開く（方法②）▶
+    <a class="method-btn outline" href="line://ti/p/@554mifwb" onclick="trackClick()">
+      LINEアプリで直接開く
     </a>
+  </div>
 
-    <div class="step" style="margin-top:14px">
-      <div class="num">2</div>
-      <span>それでもダメなら👇</span>
+  <div class="method">
+    <div class="method-head">
+      <div class="method-num">3</div>
+      <span>IDをコピー → LINEで検索</span>
     </div>
-    <a class="alt-btn green" href="line://ti/p/@554mifwb" onclick="trackClick()">
-      LINEを開く（方法③）▶
-    </a>
-
-    <div class="step" style="margin-top:14px">
-      <div class="num">3</div>
-      <span>IDをコピーしてLINEアプリで<br>友だち追加 → ID検索👇</span>
-    </div>
-    <button class="alt-btn orange" onclick="copyID()" id="copyBtn">
-      📋 ID「@554mifwb」をコピーする
+    <button class="method-btn orange" onclick="copyID()" id="copyBtn">
+      📋 @554mifwb をコピー
     </button>
   </div>
 
-  <div class="qr-section">
-    <img src="https://qr-official.line.me/sid/M/554mifwb.png" alt="LINE QR" onerror="this.parentElement.style.display='none'">
-    <p>スクショしてLINEのQRリーダーで読み取り</p>
-  </div>
-
-  <div class="footer">
-    ※ LINEアプリが必要です<br>
-    ※ いつでもブロック・解除できます
+  <div class="qr-box">
+    <img src="https://qr-official.line.me/sid/M/554mifwb.png" alt="QR" onerror="this.parentElement.style.display='none'">
+    <p>スクショ → LINEのQRリーダーで読み取り</p>
   </div>
 </div>
 
-<iframe id="hiddenFrame" class="hidden-frame"></iframe>
+<div class="footer">※ LINEアプリが必要です ／ いつでもブロック・解除可</div>
+
+<iframe id="hiddenFrame" class="hidden"></iframe>
 
 <script>
 (function(){
-  var ID = '@554mifwb';
-  var UNIVERSAL = 'https://line.me/R/ti/p/' + ID;
-  var SCHEME = 'line://ti/p/' + ID;
-  var ua = navigator.userAgent.toLowerCase();
-  var isAndroid = /android/.test(ua);
-  var isIOS = /iphone|ipad|ipod/.test(ua);
-  var isTikTok = /tiktok|musical|bytedance|bytelocale/.test(ua);
-  var isInstagram = /instagram/.test(ua);
-  var isInApp = isTikTok || isInstagram || /fbav|fban|line\/|twitter|snapchat/.test(ua);
-  var attempt = 0;
+  var ID='@554mifwb';
+  var UNIVERSAL='https://line.me/R/ti/p/'+ID;
+  var SCHEME='line://ti/p/'+ID;
+  var ua=navigator.userAgent.toLowerCase();
+  var isAndroid=/android/.test(ua);
+  var isIOS=/iphone|ipad|ipod/.test(ua);
+  var isTikTok=/tiktok|musical|bytedance|bytelocale/.test(ua);
+  var isInApp=isTikTok||/instagram|fbav|fban|line\/|twitter|snapchat/.test(ua);
+  var opened=false;
+  var attempt=0;
 
-  // アプリ内ブラウザ → 誘導バナー表示
-  if (isInApp) {
-    var g = document.getElementById('browserGuide');
-    if (g) g.classList.add('show');
-  }
+  function leave(){opened=true}
+  document.addEventListener('visibilitychange',function(){if(document.hidden)leave()});
+  window.addEventListener('pagehide',leave);
+  window.addEventListener('blur',function(){setTimeout(leave,200)});
 
-  window.trackClick = function(){
-    try { if(typeof ttq !== 'undefined') ttq.track('ClickButton'); } catch(e){}
+  window.trackClick=function(){
+    try{if(typeof ttq!=='undefined')ttq.track('ClickButton')}catch(e){}
   };
 
-  function showFailGuide(){
-    var fg = document.getElementById('failGuide');
-    if (fg) fg.classList.add('show');
+  if(isInApp){
+    var a=document.getElementById('inappAlert');
+    if(a)a.classList.add('show');
+    document.getElementById('heroSection').style.paddingTop='80px';
   }
 
-  window.openLINE = function(){
-    var btn = document.getElementById('mainBtn');
-    attempt++;
+  function showRecover(){
+    var r=document.getElementById('recover');
+    var s=document.getElementById('scrollHint');
+    if(r)r.classList.add('show');
+    if(s)s.classList.add('show');
+  }
+
+  // === 自動リダイレクト（ページ読み込み時） ===
+  function autoRedirect(){
     trackClick();
 
-    btn.textContent = '起動中...';
-
-    if (attempt <= 2) {
-      if (isAndroid) {
-        // Android: intent → Universal Link → scheme
-        try {
-          window.location.href = 'intent://ti/p/' + ID + '#Intent;scheme=line;package=jp.naver.line.android;S.browser_fallback_url=' + encodeURIComponent(UNIVERSAL) + ';end';
-        } catch(e) {
-          window.location.href = UNIVERSAL;
-        }
-        setTimeout(function(){ window.location.href = UNIVERSAL; }, 2000);
-        setTimeout(function(){ try { window.location.href = SCHEME; } catch(e){} }, 3500);
-      }
-      else if (isIOS) {
-        // iOS: Universal Link → scheme → window.open
-        window.location.href = UNIVERSAL;
-        setTimeout(function(){
-          try { window.location.href = SCHEME; } catch(e){}
-        }, 1200);
-        setTimeout(function(){
-          try { window.open(UNIVERSAL, '_blank'); } catch(e){}
-        }, 2500);
-        setTimeout(function(){
-          // iframe経由のscheme起動
-          try {
-            var f = document.getElementById('hiddenFrame');
-            if (f) f.src = SCHEME;
-          } catch(e){}
-        }, 3500);
-      }
-      else {
-        window.location.href = UNIVERSAL;
-      }
-    }
-    else {
-      // 3回目以降: 全手段同時発射
-      try { window.location.href = SCHEME; } catch(e){}
-      setTimeout(function(){ window.location.href = UNIVERSAL; }, 800);
+    // アプリ内ブラウザ → ローディング早めに消す（リダイレクト効かない前提）
+    if(isInApp){
       setTimeout(function(){
-        try { window.open(UNIVERSAL, '_blank'); } catch(e){}
-      }, 1600);
-      setTimeout(function(){
-        try {
-          var f = document.getElementById('hiddenFrame');
-          if (f) f.src = SCHEME;
-        } catch(e){}
-      }, 2400);
+        var lo=document.getElementById('loadingOverlay');
+        if(lo)lo.classList.add('hide');
+        showRecover();
+      },1500);
     }
 
-    // 4秒後にまだこのページ → 失敗と判断
+    if(isAndroid){
+      setTimeout(function(){
+        if(opened)return;
+        window.location.href='intent://ti/p/'+ID+'#Intent;scheme=line;package=jp.naver.line.android;S.browser_fallback_url='+encodeURIComponent(UNIVERSAL)+';end';
+      },400);
+      setTimeout(function(){
+        if(opened)return;
+        window.location.href=SCHEME;
+      },1800);
+      setTimeout(function(){
+        if(opened)return;
+        window.location.href=UNIVERSAL;
+      },3200);
+    }
+    else if(isIOS){
+      setTimeout(function(){
+        if(opened)return;
+        window.location.href=UNIVERSAL;
+      },400);
+      setTimeout(function(){
+        if(opened)return;
+        window.location.href=SCHEME;
+      },1400);
+      setTimeout(function(){
+        if(opened)return;
+        try{window.open(UNIVERSAL,'_blank')}catch(e){}
+      },2400);
+      setTimeout(function(){
+        if(opened)return;
+        try{document.getElementById('hiddenFrame').src=SCHEME}catch(e){}
+      },3400);
+    }
+    else{
+      setTimeout(function(){window.location.href=UNIVERSAL},400);
+    }
+
+    // 4秒後まだ残ってたらリカバリー表示
     setTimeout(function(){
-      btn.textContent = 'もう一度タップ ▶';
-      showFailGuide();
-    }, 4000);
+      if(!opened){
+        var lo=document.getElementById('loadingOverlay');
+        if(lo)lo.classList.add('hide');
+        showRecover();
+      }
+    },4000);
+  }
+
+  if(document.readyState==='complete'||document.readyState==='interactive'){
+    autoRedirect();
+  }else{
+    document.addEventListener('DOMContentLoaded',autoRedirect);
+  }
+
+  // 手動ボタン
+  window.openLINE=function(){
+    var btn=document.getElementById('mainBtn');
+    attempt++;
+    trackClick();
+    btn.textContent='起動中…';
+
+    if(attempt<=2){
+      if(isAndroid){
+        try{
+          window.location.href='intent://ti/p/'+ID+'#Intent;scheme=line;package=jp.naver.line.android;S.browser_fallback_url='+encodeURIComponent(UNIVERSAL)+';end';
+        }catch(e){window.location.href=UNIVERSAL}
+        setTimeout(function(){window.location.href=UNIVERSAL},2000);
+        setTimeout(function(){try{window.location.href=SCHEME}catch(e){}},3500);
+      }else if(isIOS){
+        window.location.href=UNIVERSAL;
+        setTimeout(function(){try{window.location.href=SCHEME}catch(e){}},1200);
+        setTimeout(function(){try{window.open(UNIVERSAL,'_blank')}catch(e){}},2500);
+        setTimeout(function(){try{document.getElementById('hiddenFrame').src=SCHEME}catch(e){}},3500);
+      }else{
+        window.location.href=UNIVERSAL;
+      }
+    }else{
+      try{window.location.href=SCHEME}catch(e){}
+      setTimeout(function(){window.location.href=UNIVERSAL},800);
+      setTimeout(function(){try{window.open(UNIVERSAL,'_blank')}catch(e){}},1600);
+      setTimeout(function(){try{document.getElementById('hiddenFrame').src=SCHEME}catch(e){}},2400);
+    }
+
+    setTimeout(function(){
+      btn.textContent='もう一度タップ ▶';
+      showRecover();
+    },4000);
   };
 
-  window.copyID = function(){
-    var b = document.getElementById('copyBtn');
-    function success(){
-      b.textContent = '✅ コピー完了！LINEで「' + ID + '」を検索';
-      b.style.background = '#06C755';
-      b.style.borderColor = '#06C755';
+  window.copyID=function(){
+    var b=document.getElementById('copyBtn');
+    function ok(){
+      b.textContent='✅ コピー完了！LINEで検索してね';
+      b.style.background='#06C755';
     }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(ID).then(success).catch(fallback);
-    } else { fallback(); }
-
-    function fallback(){
-      var t = document.createElement('textarea');
-      t.value = ID;
-      t.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
-      document.body.appendChild(t);
-      t.focus(); t.select();
-      try { document.execCommand('copy'); success(); }
-      catch(e){ b.textContent = 'ID: ' + ID + '（長押しでコピー）'; }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(ID).then(ok).catch(fb);
+    }else{fb()}
+    function fb(){
+      var t=document.createElement('textarea');t.value=ID;
+      t.style.cssText='position:fixed;left:-9999px;opacity:0';
+      document.body.appendChild(t);t.focus();t.select();
+      try{document.execCommand('copy');ok()}catch(e){b.textContent='ID: '+ID+'（長押しでコピー）'}
       document.body.removeChild(t);
     }
   };
 
-  // 残り人数
-  var c = document.getElementById('count');
-  if (c) c.textContent = '残りあと' + (Math.floor(Math.random()*20)+15) + '名';
+  var c=document.getElementById('addCount');
+  if(c){var n=3000+Math.floor(Math.random()*800);c.textContent=n.toLocaleString()}
+  var s=document.getElementById('statusText');
+  if(s)s.textContent='残りあと'+(Math.floor(Math.random()*20)+15)+'名';
 })();
 </script>
 </body>
